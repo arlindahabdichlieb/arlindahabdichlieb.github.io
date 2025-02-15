@@ -101,19 +101,7 @@
         </div>
     </div>
     
-    <div id="mainScreen" class="container hidden">
-        <div id="mainScreenContainer"></div>
-        <h1>Unsere Welt</h1>
-        <script>
-            fetch("buttons.html")
-                .then(response => response.text())
-                .then(html => {
-                    document.getElementById("mainScreenContainer").innerHTML = html;
-                });
-        </script>
-    </div>
     <script>
-
         let passwordInput = "";
         const correctPassword = "28042024";
 
@@ -128,16 +116,15 @@
         }
 
         function checkPassword() {
-            if (passwordInput === correctPassword) {
-                document.getElementById("passwordScreen").classList.add("hidden");
-                document.getElementById("mainScreen").classList.remove("hidden");
-            } else {
-                document.getElementById("errorMessage").classList.remove("hidden");
-                setTimeout(() => {
-                    document.getElementById("errorMessage").classList.add("hidden");
-                }, 2000);
-            }
-        }
+    if (passwordInput === correctPassword) {
+        window.location.href = "unsere-welt.html";
+    } else {
+        document.getElementById("errorMessage").classList.remove("hidden");
+        setTimeout(() => {
+            document.getElementById("errorMessage").classList.add("hidden");
+        }, 2000);
+    }
+}
 
         function createGIF() {
             const gif = document.createElement("img");

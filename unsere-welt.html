@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bariş & Arlinda</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6f2;
+            overflow: hidden;
+            position: relative;
+            padding-bottom: 300px; /* Mehr Platz am Ende der Seite */
+        }
+        .button {
+            background-color: #ff4d6d;
+            color: white;
+            border: none;
+            padding: 15px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 10px;
+            width: 250px;
+        }
+        .button:hover {
+            background-color: #ff1e4d;
+        }
+        .profile-container {
+            position: relative; /* Statt absolute */
+            margin-top: 200px; /* Abstand nach unten vergrößern */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .profile {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 20px;
+            border: 4px solid white;
+            animation: float 2s ease-in-out infinite alternate;
+        }
+        .line {
+            width: 150px;
+            height: 5px;
+            background-color: #ff4d6d;
+            border-radius: 5px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            white-space: nowrap;
+            padding: 5px;
+        }
+        .line span {
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        @keyframes float {
+            from {
+                transform: translateY(0px);
+            }
+            to {
+                transform: translateY(-20px);
+            }
+        }
+        .heart {
+            position: absolute;
+            color: red;
+            font-size: 30px;
+            animation: floatHeart 4s linear infinite;
+        }
+        @keyframes floatHeart {
+            0% {
+                transform: translateY(0px) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-300px) scale(1.5);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Unsere Welt</h1>
+    <a href="seiten/warumliebeichdich.html">
+        <button class="button">Warum ich dich liebe ❤️</button>
+    </a>
+    <a href="seiten/fotosvideos.html">
+        <button class="button">Unsere Fotos & Videos 📸</button>
+    </a>
+    <a href="seiten/plaene.html">
+        <button class="button">Unsere Pläne 🌍</button>
+    </a>
+    <a href="seiten/gebetszeiten.html">
+        <button class="button">Ramadan Kalender 🕋</button>
+    </a>
+
+    <div class="profile-container">
+        <img src="./fotos/meinpfp.jpg" alt="Profil 1" class="profile">
+        <div class="line">
+            <span>667 km</span>
+        </div>
+        <img src="./fotos/arlindaspfp.jpg" alt="Profil 2" class="profile">
+    </div>
+    
+    <script>
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.innerHTML = "❤️";
+            document.body.appendChild(heart);
+            
+            const posX = Math.random() * window.innerWidth;
+            heart.style.left = `${posX}px`;
+            heart.style.bottom = "0px";
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 4000);
+        }
+        setInterval(createHeart, 500);
+    </script>
+</body>
+</html>

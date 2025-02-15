@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bariş & Arlinda</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6f2;
+            position: relative;
+        }
+        .container {
+            margin-top: 10%;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+            display: inline-block;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+        h1, h2 {
+            color: #ff4d6d;
+        }
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+        .back-button {
+            position: absolute;
+            top: 5px;
+            left: 10px;
+            background-color: #ff4d6d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .back-button:hover {
+            background-color: #ff1e4d;
+        }
+        .location-button {
+            background-color: #ff4d6d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .location-button:hover {
+            background-color: #ff1e4d;
+        }
+        .prayer-times {
+            display: none;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #ff4d6d;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <button class="back-button" onclick="window.location.href='../unsere-welt.html'">🔙 Zurück</button>
+    <div class="container">
+        <div class="card">
+            <h1>Gebetszeiten im Ramadan </h1>
+            <button class="location-button" onclick="showPrayerTimes('hannover')">Bariş</button>
+            <button class="location-button" onclick="showPrayerTimes('friedrichshafen')">Arlinda</button>
+            <div id="hannover" class="prayer-times">
+                <h2>Gebetszeiten für Hannover</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Datum</th>
+                            <th>Morgen [Sahur]</th>
+                            <th>Sonnenaufgang</th>
+                            <th>Sunrise</th>
+                            <th>Dhuhr</th>
+                            <th>Asr</th>
+                            <th>Maghrib [Iftar]</th>
+                            <th>Isha</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01. März</td>
+                            <td>05:14</td>
+                            <td>05:14</td>
+                            <td>07:00</td>
+                            <td>12:33</td>
+                            <td>15:21</td>
+                            <td>18:07</td>
+                            <td>19:45</td>
+                        </tr>
+                        <tr>
+                            <td>02. März</td>
+                            <td>05:12</td>
+                            <td>05:12</td>
+                            <td>06:58</td>
+                            <td>12:33</td>
+                            <td>15:23</td>
+                            <td>18:08</td>
+                            <td>19:47</td>
+                        </tr>
+                        <tr>
+                            <td>03. März</td>
+                            <td>05:09</td>
+                            <td>05:09</td>
+                            <td>06:55</td>
+                            <td>12:32</td>
+                            <td>15:24</td>
+                            <td>18:10</td>
+                            <td>19:49</td>
+                        </tr>
+                        <tr>
+                            <td>04. März</td>
+                            <td>05:07</td>
+                            <td>05:07</td>
+                            <td>06:53</td>
+                            <td>12:32</td>
+                            <td>15:25</td>
+                            <td>18:12</td>
+                            <td>19:51</td>
+                        </tr>
+                        <tr>
+                            <td>05. März</td>
+                            <td>05:05</td>
+                            <td>05:05</td>
+                            <td>06:51</td>
+                            <td>12:32</td>
+                            <td>15:27</td>
+                            <td>18:14</td>
+                            <td>19:52</td>
+                        </tr>
+                        <tr>
+                            <td>06. März</td>
+                            <td>05:02</td>
+                            <td>05:02</td>
+                            <td>06:49</td>
+                            <td>12:32</td>
+                            <td>15:28</td>
+                            <td>18:16</td>
+                            <td>19:54</td>
+                        </tr>
+                        <tr>
+                            <td>07. März</td>
+                            <td>05:00</td>
+                            <td>05:00</td>
+                            <td>06:46</td>
+                            <td>12:32</td>
+                            <td>15:29</td>
+                            <td>18:17</td>
+                            <td>19:56</td>
+                        </tr>
+                        <tr>
+                            <td>08. März</td>
+                            <td>04:58</td>
+                            <td>04:58</td>
+                            <td>06:44</td>
+                            <td>12:32</td>
+                            <td>15:31</td>
+                            <td>18:19</td>
+                            <td>19:58</td>
+                        </tr>
+                        <tr>
+                            <td>09. März</td>
+                            <td>04:55</td>
+                            <td>04:55</td>
+                            <td>06:42</td>
+                            <td>12:32</td>
+                            <td>15:32</td>
+                            <td>18:21</td>
+                            <td>20:00</td>
+                        </tr>
+                        <tr>
+                            <td>10. März</td>
+                            <td>04:53</td>
+                            <td>04:53</td>
+                            <td>06:40</td>
+                            <td>12:32</td>
+                            <td>15:33</td>
+                            <td>18:23</td>
+                            <td>20:02</td>
+                        </tr>
+                        <td>11. März</td>
+                            <td>04:51</td>
+                            <td>04:51</td>
+                            <td>06:37</td>
+                            <td>12:32</td>
+                            <td>15:35</td>
+                            <td>18:25</td>
+                            <td>20:04</td>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="friedrichshafen" class="prayer-times">
+        <h2>Gebetszeiten für Friedrichshafen</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Datum</th>
+                    <th>Morgen [Sahur]</th>
+                    <th>Sonnenaufgang</th>
+                    <th>Sunrise</th>
+                    <th>Dhuhr</th>
+                    <th>Asr</th>
+                    <th>Maghrib [Iftar]</th>
+                    <th>Isha</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>01. März</td>
+                    <td>05:14</td>
+                    <td>05:14</td>
+                    <td>07:00</td>
+                    <td>12:33</td>
+                    <td>15:21</td>
+                    <td>18:07</td>
+                    <td>19:45</td>
+                </tr>
+                <tr>
+                    <td>02. März</td>
+                    <td>05:12</td>
+                    <td>05:12</td>
+                    <td>06:58</td>
+                    <td>12:33</td>
+                    <td>15:23</td>
+                    <td>18:08</td>
+                    <td>19:47</td>
+                </tr>
+                <tr>
+                    <td>03. März</td>
+                    <td>05:09</td>
+                    <td>05:09</td>
+                    <td>06:55</td>
+                    <td>12:32</td>
+                    <td>15:24</td>
+                    <td>18:10</td>
+                    <td>19:49</td>
+                </tr>
+                <tr>
+                    <td>04. März</td>
+                    <td>05:07</td>
+                    <td>05:07</td>
+                    <td>06:53</td>
+                    <td>12:32</td>
+                    <td>15:25</td>
+                    <td>18:12</td>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+    <script>
+        function showPrayerTimes(city) {
+            var cities = ['hannover', 'friedrichshafen'];
+            cities.forEach(function(c) {
+                document.getElementById(c).style.display = (c === city) ? 'block' : 'none';
+            });
+        }
+    </script>
+</body>
+</html>
