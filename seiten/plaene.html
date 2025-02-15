@@ -50,9 +50,10 @@
     <button class="back-button" onclick="window.location.href='../unsere-welt.html'">🔙 Zurück</button>
         <div class="card" style="margin-top: 20px;">
             <h1>Unsere nächsten Pläne 🌍</h1>
-            
+
             <h2>📍 Treffen</h2>
-            <p>Nach all den Monaten will ich dich sehen und das sogar schon sehr bald 😉</p>
+            <p>Nach all den Monaten will ich dich sehen und das sogar schon sehr bald</p>
+            <p id="countdown"></p>
             
             <h2>💍 Direkt Heiraten</h2>
             <p>Einfach direkt Heiraten</p>
@@ -64,5 +65,25 @@
             <p>Und dann eine Familie gründen</p>
         </div>
     </div>
+    <script>
+        function updateCountdown() {
+            const targetDate = new Date("2025-04-09T13:00:00");
+            const now = new Date();
+            const timeDiff = targetDate - now;
+
+            if (timeDiff > 0) {
+                const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+                document.getElementById("countdown").textContent = `${days} Tage, ${hours} Stunden, ${minutes} Minuten, ${seconds} Sekunden 😉`;
+            } else {
+                document.getElementById("countdown").textContent = "Das Treffen findet jetzt statt!";
+            }
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
 </body>
 </html>

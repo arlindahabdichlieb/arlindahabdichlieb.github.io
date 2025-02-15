@@ -57,6 +57,22 @@
         }
         .media-pair {
             display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .text-box {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .small-text {
+            font-size: 14px;
+            color: #555;
+            font-weight: bold;
+        }
+        .media-pair {
+            display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: center;
@@ -98,22 +114,31 @@
             </video>
         </div>
 
-        </div>
         <div class="media-pair">
             <img src="../fotos/kuscheltiere.jpg" alt="Unser Foto">
             <img src="../fotos/lolis.png" alt="Unser Foto">
         </div>
 
-        </div>
         <div class="media-pair">
             <img src="../fotos/kette.png" alt="Unser Foto">
             <img src="../fotos/centershocks.png" alt="Unser Foto">
         </div>
 
-        </div>
         <div class="media-pair">
             <img src="../fotos/myfavoriteperson.jpg" alt="Unser Foto">
             <img src="../fotos/backen.jpg" alt="Unser Foto">
         </div>
+        
+        <div class="media-pair">
+            <p class="small-text">😳 Berührt bis heute noch mein Herz</p>
+            <div class="media-content">
+                <img src="../fotos/hatmeinberuhrt.jpg" alt="Unser Foto">
+                <video controls>
+                    <source src="../videos/geburtstagblumen.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        
 </body>
 </html>
