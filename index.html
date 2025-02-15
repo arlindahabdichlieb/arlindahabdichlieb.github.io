@@ -101,19 +101,6 @@
         </div>
     </div>
     
-    <div id="mainScreen" class="container hidden">
-        <h1>Unsere Welt</h1>
-        <a href="seiten/warumliebeichdich.html">
-            <button class="button big-button">Warum ich dich liebe ❤️</button>
-        </a>
-        <a href="seiten/fotosvideos.html">
-            <button class="button big-button">Unsere Fotos & Videos 📸</button>
-        </a>
-        <a href="seiten/plaene.html">
-            <button class="button big-button">Unsere nächsten Pläne 🌍</button>
-        </a>
-    </div>
-
     <script>
         let passwordInput = "";
         const correctPassword = "28042024";
@@ -129,16 +116,15 @@
         }
 
         function checkPassword() {
-            if (passwordInput === correctPassword) {
-                document.getElementById("passwordScreen").classList.add("hidden");
-                document.getElementById("mainScreen").classList.remove("hidden");
-            } else {
-                document.getElementById("errorMessage").classList.remove("hidden");
-                setTimeout(() => {
-                    document.getElementById("errorMessage").classList.add("hidden");
-                }, 2000);
-            }
-        }
+    if (passwordInput === correctPassword) {
+        window.location.href = "unsere-welt.html";
+    } else {
+        document.getElementById("errorMessage").classList.remove("hidden");
+        setTimeout(() => {
+            document.getElementById("errorMessage").classList.add("hidden");
+        }, 2000);
+    }
+}
 
         function createGIF() {
             const gif = document.createElement("img");
